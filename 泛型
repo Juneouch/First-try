@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace 泛型1
+{
+    class Enum枚举类型
+    {
+        static void Main(string[] args)
+        {
+            person boss = new person();
+            boss.Level = Level.Boss;
+            person empoloyee = new person();
+            empoloyee.Level = Level.Empolyee;
+            
+            Console.WriteLine(boss.Level>empoloyee.Level);
+            Console.WriteLine((int)Level.Bigboss);
+            Console.WriteLine((int)Level.Boss);
+            Console.WriteLine((int)Level.Manager);
+            Console.WriteLine((int)Level.Empolyee);
+        }
+    }
+    enum Level
+    {
+        Empolyee,
+        Manager,
+        Boss,
+        Bigboss,
+    }
+    class person
+    {
+        public int ID { get; set; }
+        public int Name { get; set; }
+        public Level Level { get; set; }
+    }
+}
