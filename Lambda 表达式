@@ -5,3 +5,13 @@
 //Lambda表达式 ：(int a,int b)=>(return a+b;) 相当于直接在调用时声明一个函数
 Func <int, int,int> func=new Func<int,int,int>((int a,int b)=>(return a+b;))
 int func =func(100,200)
+// Lambda表达式有很多语法糖可以使用 ，此处可以简化为
+Func <int, int,int> func=new Func<int,int,int>((a,b)=>(return a+b;))
+int func =func(100,200)
+
+
+------------------
+static void DosomeCalc<T> (Func<T,T,T> func, T x,T y){
+T res= func(x,y);
+console.Writeline(res);
+}
