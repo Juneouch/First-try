@@ -11,6 +11,12 @@ int func =func(100,200)
 
 
 ------------------
+Main(){
+DosomeCalc((a,b)=>{retrurn a*b;} 100,200);
+
+}
+
+
 static void DosomeCalc<T> (Func<T,T,T> func, T x,T y){
 T res= func(x,y);
 console.Writeline(res);
