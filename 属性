@@ -1,0 +1,17 @@
+
+    public class MoonCake
+    {
+        private int price;
+        public int Price { 
+           //get 用于从本字段获取值
+            get { return price; } 
+            //set用于给本字段赋值
+            set { int a = 12;
+                  if(value<0){value=1}
+                  price = value * a; }
+            //调用属性后给属性赋值是 如 mc.Price=5, 返回的price=60
+            //且保证了输入的范围
+        }
+    }
+    //属性本质上是一个函数，用于对其他字段写入和读取的逻辑操作，如过滤等等。
+    //通常字段给private,属性给Public,这样字段更有安全性，只读
